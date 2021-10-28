@@ -1,21 +1,30 @@
 package tn.esprit.spring.service;
-
 import java.text.ParseException;
+
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import tn.esprit.spring.entities.Entreprise;
 import tn.esprit.spring.entities.Role;
 import tn.esprit.spring.entities.User;
 import tn.esprit.spring.services.IEntrepriseService;
 import tn.esprit.spring.services.IUserService;
+import org.junit.Assert;
 
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class EntrepriseServiceImplTest {
+
 	
 
 	@Autowired

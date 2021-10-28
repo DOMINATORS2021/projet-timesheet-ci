@@ -18,7 +18,7 @@ public class ContratServiceImpl implements IContratService {
     @Autowired
     ContratRepository contratRepository;
 
-    private static final Logger l = LogManager.getLogger(UserServiceImpl.class);
+    private static final Logger l = LogManager.getLogger(ContratServiceImpl.class);
 
     @Override
     public List<Contrat> retrieveAllContrats() {
