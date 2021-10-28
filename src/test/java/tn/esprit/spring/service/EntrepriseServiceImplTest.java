@@ -48,17 +48,22 @@ public class EntrepriseServiceImplTest {
 	@Test
 	public void testModifyEntreprise() throws ParseException   {
 		//Date d = dateFormat.parse("2015-03-23");
-		Entreprise u = new Entreprise("BMW", "TTC"); 
+		Entreprise u = new Entreprise(4,"BMWUpdateTest", "TTCUpdateTest"); 
 		Entreprise entrepriseUpdated  = en.updateEntreprise(u); 
 		Assert.assertEquals(u.getName(), entrepriseUpdated.getName());
 	}
 
 	@Test
 	public void testRetrieveEntreprise() {
-		Entreprise entrepriseRetrieved = en.retrieveEntreprise("1"); 
-		Assert.assertEquals(1L, entrepriseRetrieved.getId());
+		Entreprise entrepriseRetrieved = en.retrieveEntreprise("3"); 
+		Assert.assertEquals(3L, entrepriseRetrieved.getId());
 	}
 	
+	@Test
+	public void testDeleteEntreprise() {
+		en.deleteEntreprise("5");
+		Assert.assertNull(en.retrieveEntreprise("5"));
+	}
 	
 	// 5 tests unitaires  
 
