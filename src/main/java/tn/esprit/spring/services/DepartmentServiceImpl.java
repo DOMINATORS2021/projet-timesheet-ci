@@ -17,7 +17,7 @@ public class DepartmentServiceImpl implements IDepartementService {
 	private static final Logger l = LogManager.getLogger(UserServiceImpl.class);
 
 	@Override
-	public List<Departement> ListAllDepartements() {
+	public List<Departement> listallDepartements() {
 		List<Departement> departements = null; 
 		try {
 	
@@ -52,9 +52,7 @@ public class DepartmentServiceImpl implements IDepartementService {
 	@Override
 	public Departement retrieveDepartement(String id) {
 		l.info("in  retrieveDepartement id = " + id);
-		//User u =  userRepository.findById(Long.parseLong(id)).orElse(null);
-		//int i = 1/0; 
-		Departement d =  departementRepository.findById(Long.parseLong(id)).get(); 
+		Departement d =  departementRepository.findById(Long.parseLong(id)).orElse(null); 
 		l.info("departement returned : " + d);
 		return d; 
 	}

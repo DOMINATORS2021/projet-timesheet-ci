@@ -5,7 +5,7 @@ import java.util.List;
 import tn.esprit.spring.entities.Departement;
 
 public interface IDepartementService {
-	List<Departement> ListAllDepartements(); 
+	List<Departement> listallDepartements(); 
 	Departement addDepartment(Departement d);
 	void deleteDepartement(String id);
 	Departement updateDepartement(Departement d);

@@ -15,15 +15,15 @@ import tn.esprit.spring.services.IDepartementService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class DepartementServiceImpl {
+public class DepartementServiceImplTest {
 	@Autowired
 	IDepartementService ds; 
 
 	@Test
 	public void testRetrieveAllDepartements() {
-		List<Departement> listdepartements = ds.ListAllDepartements(); 
+		List<Departement> listdepartements = ds.listallDepartements(); 
 		// if there are 7 users in DB : 
-		Assert.assertEquals(15, listdepartements.size());
+		Assert.assertEquals(7, listdepartements.size());
 	}
 	
 	
@@ -43,13 +43,13 @@ public class DepartementServiceImpl {
 
 	@Test
 	public void testRetrieveDepartement() {
-		Departement departementRetrieved = ds.retrieveDepartement("1"); 
-		Assert.assertEquals(1L, departementRetrieved.getId().longValue());
+		Departement departementRetrieved = ds.retrieveDepartement("9"); 
+		Assert.assertEquals(5L, departementRetrieved.getId().longValue());
 	}
 	
 	@Test
 	public void testDeleteDepartement() {
-		ds.deleteDepartement("1");
-		Assert.assertNull(ds.retrieveDepartement("1"));
+		ds.deleteDepartement("11");
+		Assert.assertNull(ds.retrieveDepartement("11"));
 	}
 }
