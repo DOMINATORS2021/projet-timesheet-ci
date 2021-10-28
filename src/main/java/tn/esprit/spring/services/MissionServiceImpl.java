@@ -61,9 +61,9 @@ public class MissionServiceImpl implements IMissionService {
 	@Override
 	public Mission retrieveMission(int id) {
 		l.info("in  retrieveMission id = " + id);
-		//User u =  userRepository.findById(Long.parseLong(id)).orElse(null);
+		Mission m =  MissionRepository.findById(id).orElse(null);
 		//int i = 1/0; 
-		Mission m =  MissionRepository.findById(id).get(); 
+		//Mission m =  MissionRepository.findById(id).get(); 
 		l.info("user returned : " + m);
 		return m; 
 		

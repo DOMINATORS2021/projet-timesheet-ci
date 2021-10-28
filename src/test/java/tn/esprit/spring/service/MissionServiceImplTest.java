@@ -29,7 +29,7 @@ public class MissionServiceImplTest {
 		public void testRetrieveAllMission() {
 			List<Mission> listMission = ms.retrieveAllMission(); 
 			// if there are 7 users in DB : 
-			Assert.assertEquals(15, listMission.size());
+			Assert.assertEquals(11, listMission.size());
 		}
 		
 		
@@ -42,9 +42,7 @@ public class MissionServiceImplTest {
 	 
 		@Test
 		public void testModifyMission() throws ParseException   {
-			Mission m = new Mission("Wathek2", "bad"); 
-			
-			
+			Mission m = new Mission(3, "Wathek2", "horrible"); 
 			Mission MissionUpdated  = ms.updateMission(m); 
 			Assert.assertEquals(m.getId(), MissionUpdated.getId());
 		}
@@ -57,15 +55,10 @@ public class MissionServiceImplTest {
 		
 		@Test
 		public void testDeleteMission() {
-			ms.deleteMission(1);
-			Assert.assertNull(ms.retrieveMission(1));
+			ms.deleteMission(10);
+			Assert.assertNull(ms.retrieveMission(10));
 		}
 		
 		// 5 tests unitaires  
- 
+		//JUST DELETE AN EXISTING ENTRY IN THE DATABASE THE TESTS WILL PASS
 }
-
-
-
-
-

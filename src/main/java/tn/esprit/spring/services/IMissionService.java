@@ -9,7 +9,7 @@ public interface IMissionService {
 	List<Mission> retrieveAllMission(); 
 	Mission addMission(Mission m);
 	void deleteMission(int id);
-	Mission updateMission(Mission u);
+	Mission updateMission(Mission m);
 	Mission retrieveMission(int id);
 
 } 
