@@ -19,11 +19,11 @@ public class EntrepriseServiceImplTest {
 	
 
 	@Autowired
-	IEntrepriseService us; 
+	IEntrepriseService en; 
 
 	@Test
-	public void testRetrieveAllUsers() {
-		List<Entreprise> listEntreprises = us.retrieveAllEntreprise(); 
+	public void testRetrieveAllEntreprise() {
+		List<Entreprise> listEntreprises = en.retrieveAllEntreprise(); 
 		// if there are 7 users in DB : 
 		Assert.assertEquals(15, listEntreprises.size());
 	}
@@ -32,7 +32,7 @@ public class EntrepriseServiceImplTest {
 	@Test
 	public void testAddEntreprise() throws ParseException {
 		Entreprise u = new Entreprise("Tesla", "BBL"); 
-        Entreprise entrepriseAdded = us.addEntreprise(u); 
+        Entreprise entrepriseAdded = en.addEntreprise(u); 
 		Assert.assertEquals(u.getName(), entrepriseAdded.getName());
 	}
  
@@ -40,20 +40,20 @@ public class EntrepriseServiceImplTest {
 	public void testModifyEntreprise() throws ParseException   {
 		//Date d = dateFormat.parse("2015-03-23");
 		Entreprise u = new Entreprise("BMW", "TTC"); 
-		Entreprise entrepriseUpdated  = us.updateEntreprise(u); 
+		Entreprise entrepriseUpdated  = en.updateEntreprise(u); 
 		Assert.assertEquals(u.getName(), entrepriseUpdated.getName());
 	}
 
 	@Test
 	public void testRetrieveEntreprise() {
-		Entreprise entrepriseRetrieved = us.retrieveEntreprise("1"); 
+		Entreprise entrepriseRetrieved = en.retrieveEntreprise("1"); 
 		Assert.assertEquals(1L, entrepriseRetrieved.getId());
 	}
 	
 	@Test
-	public void testDeleteUser() {
-		us.deleteEntreprise("1");
-		Assert.assertNull(us.retrieveEntreprise("1"));
+	public void testDeleteEntreprise() {
+		en.deleteEntreprise("1");
+		Assert.assertNull(en.retrieveEntreprise("1"));
 	}
 	
 	// 5 tests unitaires  

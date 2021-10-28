@@ -42,7 +42,7 @@ public class MissionServiceImplTest {
 	 
 		@Test
 		public void testModifyMission() throws ParseException   {
-			Mission m = new Mission(3, "Wathek2", "horrible"); 
+			Mission m = new Mission(4, "Wathek2", "horrible"); 
 			Mission MissionUpdated  = ms.updateMission(m); 
 			Assert.assertEquals(m.getId(), MissionUpdated.getId());
 		}
@@ -55,10 +55,10 @@ public class MissionServiceImplTest {
 		
 		@Test
 		public void testDeleteMission() {
-			ms.deleteMission(10);
-			Assert.assertNull(ms.retrieveMission(10));
+			ms.deleteMission(29);
+			Assert.assertNull(ms.retrieveMission(29));
 		}
 		
 		// 5 tests unitaires  
-		//JUST DELETE AN EXISTING ENTRY IN THE DATABASE THE TESTS WILL PASS
+		//JUST ADD 1 TO THE ID YOU WOULD LIKE TO DELETE
 }

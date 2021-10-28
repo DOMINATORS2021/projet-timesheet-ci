@@ -40,20 +40,18 @@ public class EmployeServiceImpl implements IEmployeService {
 
 	@Override
 	public Employe addEmploye(Employe e) {
-		// TODO Auto-generated method stub
-		return null;
+		return employeRepository.save(e);
 	}
 
 	@Override
 	public void deleteEmpoye(String id) {
-		// TODO Auto-generated method stub
+		employeRepository.deleteById(Integer.parseInt(id));
 		
 	}
 
 	@Override
 	public Employe updateEmploye(Employe e) {
-		// TODO Auto-generated method stub
-		return null;
+		return employeRepository.save(e);
 	}
 
 	@Override
@@ -61,7 +59,7 @@ public class EmployeServiceImpl implements IEmployeService {
 		l.info("in  retrieveEmploye id = " + id);
 		//User u =  userRepository.findById(Long.parseLong(id)).orElse(null);
 		//int i = 1/0; 
-		Employe e =  employeRepository.findById(Integer.parseInt(id)).get(); 
+		Employe e =  employeRepository.findById(Integer.parseInt(id)).orElse(null); 
 		l.info("employe returned : " + e);
 		return e; 
 		
