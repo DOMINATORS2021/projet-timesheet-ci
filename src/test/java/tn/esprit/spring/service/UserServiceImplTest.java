@@ -29,7 +29,11 @@ public class UserServiceImplTest {
 		public void testRetrieveAllUsers() {
 			List<User> listUsers = us.retrieveAllUsers(); 
 			// if there are 7 users in DB : 
+<<<<<<< HEAD
 			Assert.assertEquals(8, listUsers.size());
+=======
+			Assert.assertEquals(12, listUsers.size());
+>>>>>>> 9e71e8fe9db68f3ee4ee5931e95e458dc7421a78
 		}
 		
 		
@@ -59,11 +63,17 @@ public class UserServiceImplTest {
 		
 		@Test
 		public void testDeleteUser() {
+<<<<<<< HEAD
 			us.deleteUser("10");
 			Assert.assertNull(us.retrieveUser("11"));
+=======
+			us.deleteUser("30");
+			Assert.assertNull(us.retrieveUser("30"));
+>>>>>>> 9e71e8fe9db68f3ee4ee5931e95e458dc7421a78
 		}
 		
 		// 5 tests unitaires  
+		//JUST ADD 1 TO THE ID YOU WOULD LIKE TO DELETE
  
 }
 

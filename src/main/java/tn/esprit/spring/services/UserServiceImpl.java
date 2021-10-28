@@ -60,7 +60,13 @@ public class UserServiceImpl implements IUserService {
 	@Override
 	public User retrieveUser(String id) {
 		l.info("in  retrieveUser id = " + id);
+<<<<<<< HEAD
 		User u =  userRepository.findById(Long.parseLong(id)).orElse(null); 
+=======
+		User u =  userRepository.findById(Long.parseLong(id)).orElse(null);
+		//int i = 1/0; 
+		//User u =  userRepository.findById(Long.parseLong(id)).get(); 
+>>>>>>> 9e71e8fe9db68f3ee4ee5931e95e458dc7421a78
 		l.info("user returned : " + u);
 		return u; 
 	}
