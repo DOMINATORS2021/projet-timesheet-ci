@@ -58,7 +58,7 @@ public class ContratServiceImpl implements IContratService {
         l.info("in  retrieveContrat reference = " + reference);
         //User u =  contratRepository.findById(Long.parseLong(id)).orElse(null);
         //int i = 1/0;
-        Contrat c =  contratRepository.findById(Integer.parseInt(reference)).get();
+        Contrat c =  contratRepository.findById(Integer.parseInt(reference)).orElse(null);
         l.info("contrat returned : " + c);
         return c;
     }

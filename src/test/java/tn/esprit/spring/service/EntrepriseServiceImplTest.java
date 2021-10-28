@@ -25,7 +25,7 @@ public class EntrepriseServiceImplTest {
 	public void testRetrieveAllEntreprise() {
 		List<Entreprise> listEntreprises = en.retrieveAllEntreprise(); 
 		// if there are 7 users in DB : 
-		Assert.assertEquals(15, listEntreprises.size());
+		Assert.assertEquals(6, listEntreprises.size());
 	}
 	
 	
@@ -50,11 +50,6 @@ public class EntrepriseServiceImplTest {
 		Assert.assertEquals(1L, entrepriseRetrieved.getId());
 	}
 	
-	@Test
-	public void testDeleteEntreprise() {
-		en.deleteEntreprise("1");
-		Assert.assertNull(en.retrieveEntreprise("1"));
-	}
 	
 	// 5 tests unitaires  
 

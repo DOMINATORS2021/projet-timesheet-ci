@@ -36,7 +36,7 @@ public class EmployeServiceImplTest {
 	public void testRetrieveAllEmployes() {
 		List<Employe> listEmployes = es.retrieveAllEmployes(); 
 		// if there are 7 users in DB : 
-		Assert.assertEquals(5, listEmployes.size());
+		Assert.assertEquals(6, listEmployes.size());
 	}
 	
 	
@@ -51,7 +51,7 @@ public class EmployeServiceImplTest {
 	public void testModifyEmploye() throws ParseException   {
 		//SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		//Date d = dateFormat.parse("2015-03-23");
-		Employe e = new Employe (4, "testing", "update","yosra@esprit.tn","0000", true, Role.INGENIEUR);  
+		Employe e = new Employe (5, "testing", "update","yosra@esprit.tn","0000", true, Role.INGENIEUR);  
 		Employe employeUpdated  = es.updateEmploye(e); 
 		Assert.assertEquals(e.getId(), employeUpdated.getId());
 	}
@@ -64,8 +64,8 @@ public class EmployeServiceImplTest {
 	
 	@Test
 	public void testDeleteEmploye() {
-		es.deleteEmpoye("4");
-		Assert.assertNull(es.retrieveEmploye("4"));
+		es.deleteEmpoye("8");
+		Assert.assertNull(es.retrieveEmploye("8"));
 	}
 	
 	// 5 tests unitaires  

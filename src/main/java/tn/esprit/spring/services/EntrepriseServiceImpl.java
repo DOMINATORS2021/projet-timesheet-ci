@@ -37,13 +37,13 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 	
 
 	@Override
-	public Entreprise addEntreprise(Entreprise u) {
-		return entrepriseRepository.save(u); 
+	public Entreprise addEntreprise(Entreprise en) {
+		return entrepriseRepository.save(en); 
 	}
 
 	@Override 
-	public Entreprise updateEntreprise(Entreprise u) { 
-		return entrepriseRepository.save(u);
+	public Entreprise updateEntreprise(Entreprise en) { 
+		return entrepriseRepository.save(en);
 	}
 
 	@Override
@@ -56,9 +56,9 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 		l.info("in  retrieveEntreprise id = " + id);
 		//User u =  userRepository.findById(Long.parseLong(id)).orElse(null);
 		//int i = 1/0; 
-		Entreprise e =  entrepriseRepository.findById(Integer.parseInt(id)).get(); 
-		l.info("entreprise returned : " + e);
-		return e; 
+		Entreprise en =  entrepriseRepository.findById(Integer.parseInt(id)).orElse(null); 
+		l.info("entreprise returned : " + en);
+		return en; 
 	}
 
 
