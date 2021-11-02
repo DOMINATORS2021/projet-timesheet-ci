@@ -12,7 +12,7 @@ public interface IMissionExterne {
 
 	void deleteMissionExterne(int id);
 
-	MissionExterne updateMissionExterne(MissionExterne u);
+	MissionExterne updateMissionExterne(MissionExterne m);
 
 	MissionExterne retrieveMissionExterne(int id);
 

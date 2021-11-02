@@ -12,9 +12,6 @@ public class MissionExterne extends Mission implements Serializable {
 
 	private static final long serialVersionUID = -3046278688391172322L;
 
-	// @Id
-	// @GeneratedValue(strategy=GenerationType.IDENTITY)
-	// private int id;
 
 	private String emailFacturation;
 
