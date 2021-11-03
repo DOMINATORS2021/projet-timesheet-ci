@@ -8,10 +8,14 @@ pipeline {
         stage("Build") {
             steps {
                 bat "mvn -version"
-                bat "mvn clean package -DskipTests"
+                bat "mvn clean package"
                 // sh "mvn clean package -DskipTests" pour une machine linux
             }
         }
+        stage("Tests") {
+            steps {
+                bat "mvn test"
+            }
         
         stage("Sonar") {
             steps {
@@ -21,7 +25,7 @@ pipeline {
         
         stage("DEPLOY") {
             steps {
-                bat "mvn deploy -DskipTests"
+                bat "mvn deploy"
             }
         }
     }
