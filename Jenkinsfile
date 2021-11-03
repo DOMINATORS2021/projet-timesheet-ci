@@ -30,9 +30,11 @@ pipeline {
             }
         } 
         
-        stage('Email Notification'){
+        stage("Email Notification"){
+            steps {
               mail bcc: '', body: 'Jenkins email alert', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'walid.dkhili.dk@gmail.com'
               }
+        }
     }
     post {
         always {
