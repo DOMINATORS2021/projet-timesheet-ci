@@ -36,10 +36,11 @@ pipeline {
             cleanWs()
         }
     }
+    stages {
     stage("mail"){
     steps {
-    
     emailext attachLog: true, body: 'This is the last log of the build.', subject: 'Last Pipeline Build Log ', to: 'mourad.jomaa1@esprit.tn'
+    }
     }
     }
 }
