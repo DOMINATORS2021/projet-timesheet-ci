@@ -29,6 +29,10 @@ pipeline {
                 bat "mvn deploy -DskipTests"
             }
         } 
+        
+        stage('Email Notification'){
+              mail bcc: '', body: 'Jenkins email alert', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'walid.dkhili.dk@gmail.com'
+              }
     }
     post {
         always {
