@@ -28,17 +28,12 @@ pipeline {
             steps {
                 bat "mvn deploy -DskipTests"
             }
-        }
-            stage("mail"){
-    steps {
-    emailext attachLog: true, body: 'This is the last log of the build.', subject: 'Last Pipeline Build Log ', to: 'mouradjomaa9@gmail.com'
-    }
-    }
+        } 
     }
     post {
         always {
             cleanWs()
-        }
+                  }
     }
 
     
