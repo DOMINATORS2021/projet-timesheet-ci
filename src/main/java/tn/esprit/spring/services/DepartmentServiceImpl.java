@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.repository.DepartementRepository;
 
-@Service
 public class DepartmentServiceImpl implements IDepartementService {
 	
 	@Autowired
